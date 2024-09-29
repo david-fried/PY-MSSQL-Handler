@@ -5,10 +5,4 @@ class ConnectionString:
 		self.prod = r'Driver={ODBC Driver 17 for SQL Server}; Server=XXXXXXX; Database=<ProdDatabaseName>; Trusted_Connection=yes;'
 		self.dev =  r'Driver={ODBC Driver 17 for SQL Server}; Server=XXXXXXX; Database=<DevDatabasename>; Trusted_Connection=yes;'
 		self.qa =  r'Driver={ODBC Driver 17 for SQL Server}; Server=XXXXXXX; Database=<QADatabaseName>; Trusted_Connection=yes;'
-		self.local = r'Driver={ODBC Driver 17 for SQL Server}; Server=(localDB)\MSSQLLocalDB; Database=MyLocalDb;'
-
-	def create_string(self, db_type: str):
-		"""
-		db_type: str 'local', 'dev', 'qa', or 'prod'
-		"""
-		return getattr(self, db_type)
+		self.local = r'Driver={ODBC Driver 17 for SQL Server}; Server=(localDB)\MSSQLLocalDB; Database=<MyLocalDatabaseName>;'

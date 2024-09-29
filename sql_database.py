@@ -1,5 +1,5 @@
-from .ConnectionString import ConnectionString
-from .SQLHandlers import SQLHandler
+from connection_string import ConnectionString
+from sql_handler import SQLHandler
 
 class SQLDatabase(SQLHandler):
 
