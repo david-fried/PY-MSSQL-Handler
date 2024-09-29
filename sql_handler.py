@@ -20,7 +20,6 @@ class SQLHandler:
 			query(self,
 				sql_query_statement: str,
 				parameters: tuple,
-				pandas_dataframe=True
 				**kwargs) -> pd.DataFrame:
 				Purpose: Used to perform query of the data.
 			execute(self, 
@@ -76,7 +75,6 @@ class SQLHandler:
 				
 		Optional arguments:
 			*parameters (int, str, float, or datetime)
-			pandas_dataframe (bool): True (default) of False. True returns pandas dataframe and False returns a list of tuples.
 			**kwargs: see pandas.read_sql documentation
 		"""
 		engine = self._sqlalchemy_conn()
