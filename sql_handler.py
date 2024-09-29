@@ -71,7 +71,7 @@ class SQLHandler:
 		Purpose: Useful for querying SQL database.
 
 		Required arguments:
-			sql_query_statement (str): If parameterized than must pass a tuple of values to the parameters argument.
+			sql_query_statement (str): If parameterized then must pass a tuple of values to the parameters argument.
 				
 		Optional arguments:
 			*parameters (int, str, float, or datetime)
