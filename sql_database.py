@@ -1,7 +1,7 @@
 from connection_string import ConnectionString
-from sql_handler import SQLHandler
+from sql_handler import MsSqlHandler
 
-class SQLDatabase(SQLHandler):
+class SQLDatabase(MsSqlHandler):
 
     @classmethod
     def prod(cls, read_only=True):
