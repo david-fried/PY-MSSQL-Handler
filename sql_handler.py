@@ -37,13 +37,14 @@ class MsSqlHandler:
 
 	Notes:
 	------
-	All database connection operations are handed internally. Initialize a MsSqlHandler object by simply setting the connection_string property. Nothing else is necessary to begin using performing CRUD operations using the query, execute, bulk_insert, or iter_execute method.
+	All database connection operations are handed internally. Initialize a MsSqlHandler object by simply setting the connection_string property. Nothing else is necessary to begin performing CRUD operations
+ 	using the query, execute, bulk_insert, or iter_execute method.
+
 	The execute, bulk-insert, and iter-execute methods perform write operations, and only work when the read_only property is set to False.
 	
 	The start_transaction, commit_transaction, and end_transaction methods are used to commit transaction manually. 
 	Specifically, they are used when you (a) want to use more than one write operation method, and (b) want to control when operations are committed.
-	when operations are committed. Once a MsSqlHandler object is initialized,
-	call the start_transaction method to open a connection. Perform write operations with the 
+	Once a MsSqlHandler object is initialized, call the start_transaction method to open a connection. Perform write operations with the 
 	execute, bulk-insert, and/or iter-execute methods. Then, call the commit_transaction method when wanting to commit.
 	Finally you must call end_transaction to close the connection and prevent deadlocks.
 	Note: Any parameterized sql statement must use question marks for parameter placeholders (see pyodbc documentation; e.g., e.g., 'SELECT * FROM Employees WHERE LastName = ?').
