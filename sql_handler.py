@@ -188,7 +188,7 @@ class SQLHandler:
 						if debug:
 							print('\nDebugging row values...\n')
 							if not hasattr(row, key_col):
-								print(f'NPASS SQL database table {table_name} does not contain a column named {key_col}. Debug mode failed.')
+								print(f'SQL database table {table_name} does not contain a column named {key_col}. Debug mode failed.')
 								raise AttributeError()
 							key_value = getattr(row, key_col)
 							print(f'Row Primary Key ({key_col}): {key_value}\n')
